@@ -26,9 +26,9 @@ NETutor — Единый парсер данных факультета КНиИ
 Переменная окружения (для Vision):
     Windows:    set OPENROUTER_API_KEY=sk-or-...
     Linux/Mac:  export OPENROUTER_API_KEY=sk-or-...
-    Или файл:   .env  →  OPENROUTER_API_KEY=sk-or-...
+    Или файл:   .env  ->  OPENROUTER_API_KEY=sk-or-...
 
-    Бесплатный ключ: https://openrouter.ai → Sign Up → Keys
+    Бесплатный ключ: https://openrouter.ai -> Sign Up -> Keys
 
 Использование:
     # Полный запуск (краулер + Vision)
@@ -110,7 +110,7 @@ HEADERS = {
     "Accept-Language": "ru-RU,ru;q=0.9",
 }
 
-# Маппинг URL → топик (порядок важен: более специфичные — первыми)
+# Маппинг URL -> топик (порядок важен: более специфичные — первыми)
 TOPIC_RULES: list[tuple[str, str]] = [
     (r"\d{2}-03-\d{2}",         "direction_bachelor"),
     (r"\d{2}-04-\d{2}",         "direction_master"),
@@ -245,7 +245,7 @@ def fetch_html(url: str) -> Optional[str]:
         r.encoding = r.apparent_encoding or "utf-8"
         return r.text
     except requests.RequestException as e:
-        print(f"    ✗ {e}")
+        print(f"    [X] {e}")
         return None
 
 
@@ -261,7 +261,7 @@ def fetch_image_b64(url: str) -> Optional[tuple[str, str]]:
         b64 = base64.standard_b64encode(r.content).decode("utf-8")
         return b64, media_type
     except requests.RequestException as e:
-        print(f"    ✗ Изображение {url}: {e}")
+        print(f"    [X] Изображение {url}: {e}")
         return None
 
 
@@ -372,7 +372,7 @@ def curriculum_to_text(data: dict, direction_title: str) -> str:
 
 
 # =============================================================================
-# HTML → ЧАНКИ
+# HTML -> ЧАНКИ
 # =============================================================================
 
 def strip_junk(soup: BeautifulSoup) -> None:
@@ -426,6 +426,12 @@ def table_to_text(rows: list[dict]) -> str:
     return "; ".join(lines)
 
 
+def count_sentences(text: str) -> int:
+    """Подсчёт предложений (по точке, восклицательному, вопросительному)."""
+    sentences = re.split(r"[.!?]+", text)
+    return len([s for s in sentences if len(s.strip()) > 3])
+
+
 def extract_chunks(
     soup: BeautifulSoup,
     url: str,
@@ -433,113 +439,162 @@ def extract_chunks(
     topic: str,
 ) -> list[dict]:
     """
-    Основной парсер HTML-страниц.
-    Разбивает контент на чанки по заголовкам h2/h3.
-    Каждый чанк — один смысловой раздел страницы.
+    Семантическое чанкование HTML-страниц.
+    - Чанк = всё до следующего h2 (заголовок раздела)
+    - h3 создаёт подсекцию внутри чанка
+    - Короткие параграфы объединяются
     """
     root = get_content_root(soup)
     if not root:
         return []
 
     chunks: list[dict] = []
+    seen: set[str] = set()
 
-    # Состояние текущего чанка
-    section_title = page_title
-    parts:      list[str] = []
-    list_items: list[str] = []
-    highlights: list[str] = []
-    tables:     list[dict] = []
-    seen:       set[str]  = set()   # дедупликация внутри страницы
-    processed:  set[int]  = set()   # уже обработанные узлы
+    current_section = {
+        "title": page_title,
+        "paragraphs": [],
+        "list_items": [],
+        "highlights": [],
+        "tables": [],
+    }
+    current_h3 = None
 
-    def flush():
-        """Сохраняет накопленный чанк и сбрасывает буферы."""
-        nonlocal parts, list_items, highlights, tables
-        content = clean(" ".join(parts))
-        if len(content) < MIN_CHUNK_LENGTH:
-            parts, list_items, highlights, tables = [], [], [], []
+    def flush_h3():
+        nonlocal current_h3, current_section
+        if not current_h3:
             return
+        
+        content_parts = []
+        paragraphs_text = " ".join(current_h3["paragraphs"])
+        if paragraphs_text and count_sentences(paragraphs_text) >= 1:
+            content_parts.append(paragraphs_text)
+        if current_h3["list_items"]:
+            content_parts.append(" ".join(f"• {item}" for item in current_h3["list_items"]))
+        if current_h3["tables"]:
+            content_parts.append(table_to_text(current_h3["tables"]))
+        
+        content = clean(" ".join(content_parts))
+        if content and len(content) > 20:
+            chunks.append({
+                "id": make_id(url, current_h3["title"]),
+                "source_url": url,
+                "title": current_h3["title"],
+                "page_title": page_title,
+                "topic": topic,
+                "content": content,
+                "metadata": _build_meta(current_h3),
+            })
+        
+        current_section["paragraphs"].extend(current_h3["paragraphs"])
+        current_section["list_items"].extend(current_h3["list_items"])
+        current_h3 = None
 
-        chunk: dict = {
-            "id":         make_id(url, section_title),
-            "source_url": url,
-            "title":      section_title,
-            "page_title": page_title,
-            "topic":      topic,
-            "content":    content,
+    def _build_meta(section):
+        meta = {}
+        if section["highlights"]:
+            meta["highlights"] = list(dict.fromkeys(section["highlights"]))
+        if section["list_items"]:
+            meta["list_items"] = list(dict.fromkeys(section["list_items"]))
+        if section["tables"]:
+            meta["table_data"] = section["tables"]
+        return meta if meta else {}
+
+    def flush_section():
+        nonlocal current_section
+        flush_h3()
+        
+        content_parts = []
+        paragraphs_text = " ".join(current_section["paragraphs"])
+        if paragraphs_text and count_sentences(paragraphs_text) >= 1:
+            content_parts.append(paragraphs_text)
+        if current_section["list_items"]:
+            content_parts.append(" ".join(f"• {item}" for item in current_section["list_items"]))
+        if current_section["tables"]:
+            content_parts.append(table_to_text(current_section["tables"]))
+        
+        content = clean(" ".join(content_parts))
+        if content and len(content) > 20:
+            chunks.append({
+                "id": make_id(url, current_section["title"]),
+                "source_url": url,
+                "title": current_section["title"],
+                "page_title": page_title,
+                "topic": topic,
+                "content": content,
+                "metadata": _build_meta(current_section),
+            })
+        
+        current_section = {
+            "title": "",
+            "paragraphs": [],
+            "list_items": [],
+            "highlights": [],
+            "tables": [],
         }
-        meta: dict = {}
-        if list_items:
-            meta["list_items"] = list(dict.fromkeys(list_items))
-        if highlights:
-            meta["highlights"] = list(dict.fromkeys(highlights))
-        if tables:
-            meta["table_data"] = tables
-        if meta:
-            chunk["metadata"] = meta
-
-        chunks.append(chunk)
-        parts, list_items, highlights, tables = [], [], [], []
 
     for el in root.find_all(
         ["h1", "h2", "h3", "p", "li", "strong", "b",
          "td", "th", "blockquote", "table"],
         recursive=True,
     ):
-        eid = id(el)
-        if eid in processed:
-            continue
-        processed.add(eid)
-
-        tag  = el.name
+        tag = el.name
         text = clean(el.get_text())
         if not text:
             continue
 
-        if tag in ("h1", "h2", "h3"):
-            flush()
-            section_title = text
+        if tag in ("h1", "h2"):
+            flush_section()
+            current_section["title"] = text
+
+        elif tag == "h3":
+            flush_h3()
+            current_h3 = {
+                "title": text,
+                "paragraphs": [],
+                "list_items": [],
+                "highlights": [],
+                "tables": [],
+            }
 
         elif tag == "p":
+            target = current_h3 if current_h3 else current_section
             if text not in seen:
-                parts.append(text)
+                target["paragraphs"].append(text)
                 seen.add(text)
 
         elif tag == "li":
-            # Только листовые li (без вложенных списков)
             if el.parent and el.parent.name in ("ul", "ol"):
                 if not el.find(["ul", "ol"]) and text not in seen:
-                    list_items.append(text)
-                    parts.append(f"• {text}")
+                    target = current_h3 if current_h3 else current_section
+                    target["list_items"].append(text)
                     seen.add(text)
 
         elif tag in ("strong", "b"):
-            if len(text) > 3 and text not in highlights:
-                highlights.append(text)
+            target = current_h3 if current_h3 else current_section
+            if len(text) > 3 and text not in seen:
+                target["highlights"].append(text)
 
         elif tag == "table":
             tdata = parse_html_table(el)
             if tdata:
-                tables.extend(tdata)
-                ttext = table_to_text(tdata)
-                if ttext and ttext not in seen:
-                    parts.append(ttext)
-                    seen.add(ttext)
-            # Помечаем все ячейки таблицы как обработанные
-            for cell in el.find_all(["td", "th"]):
-                processed.add(id(cell))
+                target = current_h3 if current_h3 else current_section
+                target["tables"].extend(tdata)
+                for cell in el.find_all(["td", "th"]):
+                    pass
 
         elif tag == "blockquote":
+            target = current_h3 if current_h3 else current_section
             if text not in seen:
-                parts.append(f'"{text}"')
+                target["paragraphs"].append(f'"{text}"')
                 seen.add(text)
 
-    flush()
+    flush_section()
     return chunks
 
 
 # =============================================================================
-# ПАРСЕР УЧЕБНЫХ ПЛАНОВ (картинки → Claude Vision)
+# ПАРСЕР УЧЕБНЫХ ПЛАНОВ (картинки -> Claude Vision)
 # =============================================================================
 
 def parse_study_plans(soup: BeautifulSoup, url: str) -> tuple[list[dict], list[dict]]:
@@ -598,11 +653,11 @@ def parse_study_plans(soup: BeautifulSoup, url: str) -> tuple[list[dict], list[d
         vision_ok = False
 
         if vision_on and img_full:
-            print(f"    Vision → {direction_title} ...", end=" ", flush=True)
+            print(f"    Vision -> {direction_title} ...", end=" ", flush=True)
             vision_data = parse_image_with_vision(img_full, direction_title)
 
             if vision_data.get("error"):
-                print(f"✗ {vision_data['error']}")
+                print(f"[X] {vision_data['error']}")
                 failed_list.append({
                     "direction_title": direction_title,
                     "direction_code":  code,
@@ -613,7 +668,7 @@ def parse_study_plans(soup: BeautifulSoup, url: str) -> tuple[list[dict], list[d
                 vision_data = {}
             else:
                 sems = len(vision_data.get("curriculum", []))
-                print(f"✓ ({sems} сем.)")
+                print(f"[OK] ({sems} сем.)")
                 vision_ok = True
 
             time.sleep(VISION_DELAY)
@@ -755,9 +810,9 @@ def crawl() -> tuple[list[dict], list[dict]]:
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "")
     print(f"Префикс : {CRAWL_PREFIX}")
-    print(f"Vision  : {'✓ ' + VISION_MODEL if api_key and OPENAI_AVAILABLE else '✗ отключён'}")
+    print(f"Vision  : {'[OK] ' + VISION_MODEL if api_key and OPENAI_AVAILABLE else '[X] OFF'}")
     if not api_key:
-        print("          → задай OPENROUTER_API_KEY (бесплатно: openrouter.ai)")
+        print("          -> задай OPENROUTER_API_KEY (бесплатно: openrouter.ai)")
     print()
 
     pages_done = 0
@@ -790,7 +845,7 @@ def crawl() -> tuple[list[dict], list[dict]]:
         else:
             chunks = extract_chunks(soup, url, page_title, topic)
 
-        print(f"       → {len(chunks)} чанков | {topic}")
+        print(f"       -> {len(chunks)} чанков | {topic}")
         all_chunks.extend(chunks)
 
         # Собираем новые ссылки
@@ -822,11 +877,11 @@ def retry_failed() -> None:
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "")
     if not api_key:
-        print("✗ OPENROUTER_API_KEY не задан")
+        print("[X] OPENROUTER_API_KEY не задан")
         sys.exit(1)
 
     if not os.path.exists(OUTPUT_FAILED):
-        print(f"✓ {OUTPUT_FAILED} не найден — нечего повторять")
+        print(f"[OK] {OUTPUT_FAILED} не найден — нечего повторять")
         return
 
     with open(OUTPUT_FAILED, encoding="utf-8") as f:
@@ -834,14 +889,14 @@ def retry_failed() -> None:
 
     items = failed_data.get("items", [])
     if not items:
-        print("✓ Нет неудачных картинок")
+        print("[OK] Нет неудачных картинок")
         return
 
     print(f"Найдено: {len(items)} картинок\n")
 
     # Загружаем существующие чанки
     if not os.path.exists(OUTPUT_CHUNKS):
-        print(f"✗ {OUTPUT_CHUNKS} не найден — сначала запусти полный краулер")
+        print(f"[X] {OUTPUT_CHUNKS} не найден — сначала запусти полный краулер")
         sys.exit(1)
 
     with open(OUTPUT_CHUNKS, encoding="utf-8") as f:
@@ -859,17 +914,17 @@ def retry_failed() -> None:
         source_url      = item["source_url"]
         code            = item["direction_code"]
 
-        print(f"[→] {direction_title}")
+        print(f"[->] {direction_title}")
         vision_data = parse_image_with_vision(img_url, direction_title)
 
         if vision_data.get("error"):
-            print(f"    ✗ {vision_data['error']}")
+            print(f"    [X] {vision_data['error']}")
             still_failed.append({**item, "error": vision_data["error"]})
             time.sleep(VISION_DELAY)
             continue
 
         sems = len(vision_data.get("curriculum", []))
-        print(f"    ✓ ({sems} сем.)")
+        print(f"    [OK] ({sems} сем.)")
 
         content  = curriculum_to_text(vision_data, direction_title)
         chunk_id = make_id(source_url, direction_title)
@@ -973,12 +1028,12 @@ def main() -> None:
     vision_total = sum(1 for c in chunks if c.get("topic") == "study_plans")
 
     print(f"\n{'=' * 60}")
-    print(f"✅ Готово!")
-    print(f"   Чанков : {len(chunks)}  →  {OUTPUT_CHUNKS}")
+    print(f"[OK] Done!")
+    print(f"   Чанков : {len(chunks)}  ->  {OUTPUT_CHUNKS}")
     if vision_total:
-        print(f"   Vision : ✓ {vision_ok} / {vision_total} учебных планов", end="")
+        print(f"   Vision : [OK] {vision_ok} / {vision_total} учебных планов", end="")
         if failed:
-            print(f"  (✗ {len(failed)} не удалось  →  {OUTPUT_FAILED})")
+            print(f"  ([X] {len(failed)} не удалось  ->  {OUTPUT_FAILED})")
             print(f"   Повтори позже: python netutor_parser.py --retry")
         else:
             print()

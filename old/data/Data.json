@@ -1,0 +1,3019 @@
+{
+  "directions": [
+    {
+      "name": "Программная инженерия",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "09.03.04",
+                "degree": "Бакалавриат",
+                "duration_years": 4,
+                "language": "Русский",
+                "department": "Математической кибернетики и компьютерных наук",
+                "profile": "Разработка программно-информационных систем"
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                { "code": "06.001", "name": "Программист" },
+                {
+                  "code": "06.003",
+                  "name": "Архитектор программного обеспечения"
+                },
+                {
+                  "code": "06.004",
+                  "name": "Специалист по тестированию в области информационных технологий"
+                },
+                { "code": "06.011", "name": "Администратор баз данных" },
+                {
+                  "code": "06.015",
+                  "name": "Специалист по информационным системам"
+                },
+                {
+                  "code": "06.016",
+                  "name": "Руководитель проектов в области информационных технологий"
+                },
+                { "code": "06.019", "name": "Технический писатель" },
+                { "code": "06.022", "name": "Системный аналитик" },
+                {
+                  "code": "06.025",
+                  "name": "Специалист по дизайну графических пользовательских интерфейсов"
+                },
+                { "code": "06.028", "name": "Системный программист" },
+                {
+                  "code": "06.035",
+                  "name": "Разработчик Web и мультимедийных приложений"
+                },
+                {
+                  "code": "06.040",
+                  "name": "Специалист по контролю качества информационно-коммуникационных систем и сервисов"
+                },
+                {
+                  "code": "40.011",
+                  "name": "Специалист по научно-исследовательским и опытно-конструкторским разработкам"
+                }
+              ]
+            },
+            {
+              "category": "Курсы",
+              "courses": [
+                {
+                  "name": "История России",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теоретическая информатика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 96, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Алгебра и геометрия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 192, "self_study": 96, "labs": 96 }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Современные информационные технологии",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Безопасность жизнедеятельности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения натенкатических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерные сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практики",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": 2
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": 2.67
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": 5.83
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Фундаментальная информатика и информационные технологии",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "02.03.02",
+                "degree": "Бакалавриат",
+                "duration_years": 4,
+                "language": "Русский",
+                "department": "Компьютерных наук и информационных технологий",
+                "profile": "Информатика и компьютерные науки"
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                { "code": "06.011", "name": "Администратор баз данных" },
+                {
+                  "code": "06.015",
+                  "name": "Специалист по информационным системам"
+                },
+                {
+                  "code": "06.016",
+                  "name": "Руководитель проектов в области информационных технологий"
+                },
+                { "code": "06.022", "name": "Системный аналитик" },
+                {
+                  "code": "06.025",
+                  "name": "Специалист по дизайну графических пользовательских интерфейсов"
+                },
+                { "code": "06.028", "name": "Системный программист" },
+                {
+                  "code": "06.035",
+                  "name": "Разработчик WEB и мультимедийных приложений"
+                },
+                {
+                  "code": "06.040",
+                  "name": "Специалист по контролю качества информационно-коммуникационных систем и сервисов"
+                },
+                { "code": "06.001", "name": "Программист" },
+                {
+                  "code": "06.003",
+                  "name": "Архитектор программного обеспечения"
+                },
+                { "code": "06.019", "name": "Технический писатель" },
+                {
+                  "code": "40.011",
+                  "name": "Специалист по научно-исследовательским и опытно-конструкторским разработкам"
+                }
+              ]
+            },
+            {
+              "category": "Курсы",
+              "courses": [
+                {
+                  "name": "История России",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теоретическая информатика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 96, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Алгебра и геометрия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 192, "self_study": 96, "labs": 96 }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Современные информационные технологии",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Безопасность жизнедеятельности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения натенкатических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерные сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практики",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": 2
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": 2.67
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": 5.83
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Математическое обеспечение и администрирование информационных систем",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "02.03.03",
+                "degree": "Бакалавриат",
+                "duration_years": 4,
+                "language": "Русский",
+                "department": "Компьютерных наук и информационных технологий",
+                "profile": "Большие данные и машинное обучение",
+                "group_number": "141",
+                "start_year": 2023
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                { "code": "06.042", "name": "Специалист по большим данным" },
+                { "code": "06.001", "name": "Программист" }
+              ]
+            },
+            {
+              "category": "Курсы",
+              "courses": [
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "История России",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Алгебра и геометрия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 192, "self_study": 96, "labs": 96 }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Современные информационные технологии",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Безопасность жизнедеятельности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения математических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерные сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практики",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": 2
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": 2.67
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": 5.83
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Компьютерная безопасность",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "10.05.01",
+                "degree": "Специалист",
+                "duration_years": 5.5,
+                "educational_standard": "ФГОС ВО № 1153 от 09.10.2015",
+                "start_year": 2023,
+                "group_number": "131",
+                "profile": "Математические методы защиты информации"
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                {
+                  "code": "06.004",
+                  "name": "Специалист по тестированию в области информационных технологий"
+                },
+                { "code": "06.011", "name": "Администратор баз данных" },
+                {
+                  "code": "06.015",
+                  "name": "Специалист по информационным системам"
+                },
+                {
+                  "code": "06.016",
+                  "name": "Руководитель проектов в области информационных технологий"
+                },
+                { "code": "06.022", "name": "Системный аналитик" },
+                {
+                  "code": "06.025",
+                  "name": "Специалист по дизайну графических пользовательских интерфейсов"
+                },
+                { "code": "06.028", "name": "Системный программист" },
+                {
+                  "code": "06.035",
+                  "name": "Разработчик WEB и мультимедийных приложений"
+                },
+                {
+                  "code": "06.040",
+                  "name": "Специалист по контролю качества информационно-коммуникационных систем и сервисов"
+                },
+                { "code": "06.001", "name": "Программист" },
+                {
+                  "code": "06.003",
+                  "name": "Архитектор программного обеспечения"
+                },
+                {
+                  "code": "06.019",
+                  "name": "Технический писатель (специалист по технической документации в области информационных технологий)"
+                },
+                {
+                  "code": "40.011",
+                  "name": "Специалист по научно-исследовательским и опытно-конструкторским разработкам"
+                }
+              ]
+            },
+            {
+              "category": "Курсы",
+              "courses": [
+                {
+                  "name": "История России",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теоретическая информатика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 96, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Алгебра и геометрия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 192, "self_study": 96, "labs": 96 }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Современные информационные технологии",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Безопасность жизнедеятельности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения натенкатических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерные сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практика",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": "3 1/3"
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": "2 2/3"
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": "1 1/3"
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": "1 1/3"
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": "1 5/6"
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": "1 5/6"
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": "1 5/6"
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": "5 5/6"
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Информатика и Вычислительная техника",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "09.03.01",
+                "degree": "Бакалавриат",
+                "duration_years": 4,
+                "language": "Русский",
+                "department": "Дискретной математики и информационных технологий",
+                "faculty": "Компьютерных наук и информационных технологий",
+                "profile": "Вычислительные машины, комплексы, системы и сети",
+                "group_number": "121",
+                "start_year": 2023
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                { "code": "06.003", "name": "Администратор баз данных" },
+                {
+                  "code": "06.004",
+                  "name": "Специалист по тестированию в области информационных технологий"
+                },
+                {
+                  "code": "06.005",
+                  "name": "Специалист по информационным системам"
+                },
+                {
+                  "code": "06.006",
+                  "name": "Руководитель проектов в области информационных технологий"
+                },
+                { "code": "06.007", "name": "Системный аналитик" },
+                {
+                  "code": "06.008",
+                  "name": "Специалист по дизайну графических пользовательских интерфейсов"
+                },
+                { "code": "06.009", "name": "Системный программист" },
+                {
+                  "code": "06.010",
+                  "name": "Разработчик WEB и мультимедийных приложений"
+                },
+                {
+                  "code": "06.011",
+                  "name": "Специалист по контролю качества информационно-коммуникационных систем и сервисов"
+                },
+                { "code": "06.012", "name": "Программист" },
+                {
+                  "code": "06.013",
+                  "name": "Архитектор программного обеспечения"
+                },
+                {
+                  "code": "06.014",
+                  "name": "Технический писатель (специалист по технической документации в области информационных технологий)"
+                },
+                {
+                  "code": "40.011",
+                  "name": "Специалист по научно-исследовательским и опытно-конструкторским разработкам"
+                }
+              ]
+            },
+            {
+              "category": "Области профессиональной деятельности и (или) сферы профессиональной деятельности",
+              "areas": [
+                {
+                  "code": "06",
+                  "name": "Информационные и коммуникационные технологии"
+                },
+                {
+                  "code": "40",
+                  "name": "Сквозные виды профессиональной деятельности в промышленности"
+                }
+              ]
+            },
+            {
+              "category": "Курсы",
+              "courses": [
+                {
+                  "name": "История России",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "self_study": 64, "labs": 64 }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 192, "self_study": 96, "labs": 96 }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 64, "self_study": 32, "labs": 32 }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "self_study": 16, "labs": 16 }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения натенкатических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Телекоммуникации и сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практики",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": 2
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": 2.67
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": 5.83
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Системный анализ и управление",
+      "documents": [
+        {
+          "type": "Учебный план",
+          "sections": [
+            {
+              "category": "Общие сведения",
+              "details": {
+                "code": "27.03.03",
+                "degree": "Бакалавриат",
+                "duration_years": 4,
+                "language": "Русский",
+                "profile": "Системного анализа и автоматического управления",
+                "faculty": "Компьютерных наук и информационных технологий",
+                "group_number": "181",
+                "start_year": 2021,
+                "educational_standard": "ФГОС № 902 от 07.08.2020"
+              }
+            },
+            {
+              "category": "Образовательные стандарты",
+              "standards": [
+                {
+                  "code": "06.015",
+                  "name": "Специалист по информационным системам"
+                },
+                {
+                  "code": "06.017",
+                  "name": "Руководитель разработки программного обеспечения"
+                },
+                { "code": "06.022", "name": "Системный аналитик" },
+                {
+                  "code": "40.011",
+                  "name": "Специалист по научно-исследовательским и опытно-конструкторским разработкам"
+                }
+              ]
+            },
+            {
+              "category": "Области профессиональной деятельности",
+              "areas": [
+                {
+                  "code": "06",
+                  "name": "Связь, информационные и коммуникационные технологии"
+                },
+                {
+                  "code": "40",
+                  "name": "Сквозные виды профессиональной деятельности в промышленности"
+                }
+              ]
+            },
+            {
+              "category": "Типы задач профессиональной деятельности",
+              "tasks": ["Научно-исследовательский", "Расчетно-конструкторский"]
+            },
+            {
+              "category": "Календарный учебный график",
+              "description": "Календарный учебный график охватывает период с сентября по август, с указанием занятий по месяцам и неделям."
+            },
+            {
+              "category": "Сводные данные",
+              "courses": [
+                {
+                  "name": "История",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 32, "total": 32 }
+                },
+                {
+                  "name": "Физическая культура и спорт",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теоретическая информатика",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 96
+                  }
+                },
+                {
+                  "name": "Иностранный язык",
+                  "type": "Экзамен",
+                  "workload": { "lectures": 128, "total": 128 }
+                },
+                {
+                  "name": "Математический анализ",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 128
+                  }
+                },
+                {
+                  "name": "Алгебра и геометрия",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Информационные технологии и программирование",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 96,
+                    "self_study": 48,
+                    "labs": 48,
+                    "total": 192
+                  }
+                },
+                {
+                  "name": "Математическая логика и теория алгоритмов",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Современные информационные технологии",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Физика",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Безопасность жизнедеятельности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Операционные системы",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Структуры данных и алгоритмы",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Дискретная математика",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Дифференциальные уравнения",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Теория вероятностей и математическая статистика",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Базы данных",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Языки программирования",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Методы вычислений",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Теория графов",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Тестирование программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Технологии программирования",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Философия",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Стандартизация программного обеспечения",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Проектирование архитектуры информационных систем",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Информационная безопасность и защита информации",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 64,
+                    "self_study": 32,
+                    "labs": 32,
+                    "total": 64
+                  }
+                },
+                {
+                  "name": "Моделирование",
+                  "type": "Экзамен",
+                  "workload": {
+                    "lectures": 32,
+                    "self_study": 16,
+                    "labs": 16,
+                    "total": 32
+                  }
+                },
+                {
+                  "name": "Введение в специальность",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Машинно-зависимые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерная графика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы экономики и финансовой грамотности",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Основы права и антикоррупционного поведения",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Интеллектуальные системы и технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программные средства решения натенкатических задач",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Программирование и конфигурирование в корпоративных информационных системах",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Управление проектами",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.01",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Введение в учебный процесс",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Коммуникативный практикум",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Ассистивные информационно-коммуникационные технологии",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.02",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Русский язык и культура речи",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Риторика",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.03",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Формальные языки и грамматики",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Теория формальных языков и трансляций",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.04",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Параллельное и распределенное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Современная методология аналитической обработки данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.05",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Компьютерные сети",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Системы и сети передачи данных",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Дисциплины по выбору Б1.В.ДВ.06",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Логическое и функциональное программирование",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Скриптовые языки программирования",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Элективные дисциплины по физической культуре и спорту",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Игровые виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                },
+                {
+                  "name": "Циклические виды спорта",
+                  "type": "Зачет",
+                  "workload": { "lectures": 32, "self_study": 32, "total": 32 }
+                }
+              ]
+            },
+            {
+              "category": "Практики",
+              "practices": [
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 1,
+                  "workload": 2
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 2,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 3,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 4,
+                  "workload": 2.67
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 5,
+                  "workload": 1
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 6,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Научно-исследовательская работа",
+                  "semester": 7,
+                  "workload": 1.33
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 5,
+                  "workload": 4
+                },
+                {
+                  "name": "Технологическая практика",
+                  "semester": 6,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 7,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Преддипломная практика",
+                  "semester": 8,
+                  "workload": 1.83
+                },
+                {
+                  "name": "Государственная итоговая аттестация",
+                  "semester": 8,
+                  "workload": 5.83
+                }
+              ]
+            },
+            {
+              "category": "Экзамены и зачеты",
+              "details": {
+                "total_weeks": 130,
+                "additional_days": 4,
+                "exam_weeks": 20,
+                "production_practice": 4,
+                "pre-diploma_practice": "1 неделя и 5 дней",
+                "graduation_work": "5 недель и 5 дней"
+              }
+            },
+            {
+              "category": "Календарь",
+              "schedule": {
+                "2023-2024": {
+                  "semester_1": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_2": {
+                    "start_date": "2024-02-08",
+                    "end_date": "2024-06-12",
+                    "exam_start_date": "2024-06-13",
+                    "exam_end_date": "2024-06-30"
+                  },
+                  "semester_3": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-31",
+                    "exam_start_date": "2024-01-13",
+                    "exam_end_date": "2024-01-31"
+                  },
+                  "semester_4": {
+                    "start_date": "2024-02-05",
+                    "end_date": "2024-05-31",
+                    "exam_start_date": "2024-06-01",
+                    "exam_end_date": "2024-06-21"
+                  },
+                  "semester_5": {
+                    "start_date": "2023-09-01",
+                    "end_date": "2023-12-08",
+                    "exam_start_date": "2023-12-09",
+                    "exam_end_date": "2023-12-22"
+                  },
+                  "semester_6": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_7": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  },
+                  "semester_8": {
+                    "start_date": "2024-01-09",
+                    "end_date": "2024-04-21",
+                    "exam_start_date": "2024-04-22",
+                    "exam_end_date": "2024-05-02"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 """
-University Parser — парсер информации СГУ для студентов и абитуриентов
-===================================================================
+University Parser — парсер информации СГУ с семантическим чанкованием
+========================================================================
 
 Собирает информацию общего характера:
 - Общежития
@@ -9,13 +9,18 @@ University Parser — парсер информации СГУ для студе
 - Военное обучение
 - Поддержка студентов
 
+Особенности:
+- Семантическое чанкование: разбиение по смыслу, не по размеру
+- Каждый чанк = одна логическая секция (до h2/h3)
+- Объединение коротких параграфов
+- Минимум 2 предложения или списки
+
 Использование:
     python university_parser.py
 """
 
 import argparse
 import json
-import os
 import re
 import sys
 import time
@@ -36,7 +41,6 @@ BASE_URL = "https://www.sgu.ru"
 REQUEST_TIMEOUT = 15
 REQUEST_DELAY = 1.0
 MAX_PAGES = 50
-MIN_CHUNK_LENGTH = 30
 
 OUTPUT_FILE = "university_chunks.json"
 
@@ -86,6 +90,12 @@ def make_id(url: str, suffix: str = "") -> str:
 def clean(text: str) -> str:
     text = re.sub(r"[\r\n\t]+", " ", text)
     return re.sub(r" {2,}", " ", text).strip()
+
+
+def count_sentences(text: str) -> int:
+    """Подсчёт предложений (по точке, восклицательному, вопросительному)."""
+    sentences = re.split(r"[.!?]+", text)
+    return len([s for s in sentences if len(s.strip()) > 3])
 
 
 def detect_topic(url: str) -> str:
@@ -168,108 +178,154 @@ def parse_html_table(table: Tag) -> list[dict]:
 
 def table_to_text(rows: list[dict]) -> str:
     lines = [" | ".join(f"{k}: {v}" for k, v in row.items() if v) for row in rows]
-    return "; ".join(lines)
+    return ". ".join(lines)
 
 
-def extract_chunks(
+def extract_semantic_chunks(
     soup: BeautifulSoup,
     url: str,
     page_title: str,
     topic: str,
 ) -> list[dict]:
+    """
+    Семантическое чанкование:
+    - Чанк = всё до следующего h2 (или конец страницы)
+    - Короткие параграфы (<2 предложений) объединяются с предыдущим
+    - h3 создаёт подсекцию внутри чанка
+    """
     root = get_content_root(soup)
     if not root:
         return []
 
     chunks = []
-    section_title = page_title
-    parts = []
-    list_items = []
-    highlights = []
-    tables = []
+    
+    current_section = {
+        "title": page_title,
+        "paragraphs": [],
+        "list_items": [],
+        "highlights": [],
+        "tables": [],
+        "h3_sections": [],
+    }
+    
+    current_h3 = None
     seen = set()
-    processed = set()
 
-    def flush():
-        nonlocal parts, list_items, highlights, tables
-        content = clean(" ".join(parts))
-        if len(content) < MIN_CHUNK_LENGTH:
-            parts, list_items, highlights, tables = [], [], [], []
-            return
+    def flush_section(is_h3: bool = False):
+        nonlocal current_section, current_h3
+        
+        content_parts = []
+        
+        if current_h3:
+            section_data = current_h3
+        else:
+            section_data = current_section
+        
+        paragraphs_text = " ".join(section_data["paragraphs"])
+        
+        if paragraphs_text and count_sentences(paragraphs_text) >= 1:
+            content_parts.append(paragraphs_text)
+        
+        if section_data["list_items"]:
+            content_parts.append(" ".join(f"• {item}" for item in section_data["list_items"]))
+        
+        if section_data["tables"]:
+            content_parts.append(table_to_text(section_data["tables"]))
+        
+        content = clean(" ".join(content_parts))
+        
+        title = current_h3["title"] if current_h3 else section_data["title"]
+        
+        if content and len(content) > 20:
+            chunk = {
+                "id": make_id(url, title),
+                "source_url": url,
+                "title": title,
+                "page_title": page_title,
+                "topic": topic,
+                "content": content,
+            }
+            meta = {}
+            if section_data["highlights"]:
+                meta["highlights"] = list(dict.fromkeys(section_data["highlights"]))
+            if section_data["list_items"]:
+                meta["list_items"] = list(dict.fromkeys(section_data["list_items"]))
+            if section_data["tables"]:
+                meta["table_data"] = section_data["tables"]
+            if meta:
+                chunk["metadata"] = meta
+            
+            chunks.append(chunk)
+        
+        if current_h3 and not is_h3:
+            current_section["paragraphs"].extend(current_h3["paragraphs"])
+            current_section["list_items"].extend(current_h3["list_items"])
+            current_h3 = None
 
-        chunk = {
-            "id": make_id(url, section_title),
-            "source_url": url,
-            "title": section_title,
-            "page_title": page_title,
-            "topic": topic,
-            "content": content,
-        }
-        meta = {}
-        if list_items:
-            meta["list_items"] = list(dict.fromkeys(list_items))
-        if highlights:
-            meta["highlights"] = list(dict.fromkeys(highlights))
-        if tables:
-            meta["table_data"] = tables
-        if meta:
-            chunk["metadata"] = meta
-
-        chunks.append(chunk)
-        parts, list_items, highlights, tables = [], [], [], []
-
-    for el in root.find_all(
-        ["h1", "h2", "h3", "p", "li", "strong", "b",
-         "td", "th", "blockquote", "table"],
-        recursive=True,
-    ):
-        eid = id(el)
-        if eid in processed:
-            continue
-        processed.add(eid)
-
+    for el in root.find_all(["h1", "h2", "h3", "p", "li", "strong", "b", "blockquote", "table"], recursive=True):
         tag = el.name
         text = clean(el.get_text())
-        if not text:
+        if not text or len(text) < 3:
             continue
-
-        if tag in ("h1", "h2", "h3"):
-            flush()
-            section_title = text
-
+        
+        if tag in ("h1", "h2"):
+            flush_section()
+            current_section = {
+                "title": text,
+                "paragraphs": [],
+                "list_items": [],
+                "highlights": [],
+                "tables": [],
+                "h3_sections": [],
+            }
+            current_h3 = None
+        
+        elif tag == "h3":
+            if current_h3:
+                flush_section(is_h3=True)
+            current_h3 = {
+                "title": text,
+                "paragraphs": [],
+                "list_items": [],
+                "highlights": [],
+                "tables": [],
+            }
+        
         elif tag == "p":
+            target = current_h3 if current_h3 else current_section
             if text not in seen:
-                parts.append(text)
+                target["paragraphs"].append(text)
                 seen.add(text)
-
+        
         elif tag == "li":
             if el.parent and el.parent.name in ("ul", "ol"):
                 if not el.find(["ul", "ol"]) and text not in seen:
-                    list_items.append(text)
-                    parts.append(f"• {text}")
+                    target = current_h3 if current_h3 else current_section
+                    target["list_items"].append(text)
                     seen.add(text)
-
+        
         elif tag in ("strong", "b"):
-            if len(text) > 3 and text not in highlights:
-                highlights.append(text)
-
+            target = current_h3 if current_h3 else current_section
+            if len(text) > 3 and text not in seen:
+                target["highlights"].append(text)
+        
+        elif tag == "blockquote":
+            target = current_h3 if current_h3 else current_section
+            if text not in seen:
+                target["paragraphs"].append(f'"{text}"')
+                seen.add(text)
+        
         elif tag == "table":
             tdata = parse_html_table(el)
             if tdata:
-                tables.extend(tdata)
-                ttext = table_to_text(tdata)
-                if ttext and ttext not in seen:
-                    parts.append(ttext)
-                    seen.add(ttext)
-            for cell in el.find_all(["td", "th"]):
-                processed.add(id(cell))
+                target = current_h3 if current_h3 else current_section
+                target["tables"].extend(tdata)
+                for cell in el.find_all(["td", "th"]):
+                    if cell not in root.find_all(["td", "th"]):
+                        continue
 
-        elif tag == "blockquote":
-            if text not in seen:
-                parts.append(f'"{text}"')
-                seen.add(text)
+    flush_section()
 
-    flush()
     return chunks
 
 
@@ -278,7 +334,7 @@ def crawl() -> list[dict]:
     visited = set()
     queue = list(dict.fromkeys(SEED_URLS))
 
-    print(f"University Parser — Crawling SGU")
+    print(f"University Parser — Semantic Chunking")
     print(f"Starting URLs: {len(queue)}")
     print()
 
@@ -304,7 +360,7 @@ def crawl() -> list[dict]:
         page_title = clean(h1.get_text()) if h1 else url
         topic = detect_topic(url)
 
-        chunks = extract_chunks(soup, url, page_title, topic)
+        chunks = extract_semantic_chunks(soup, url, page_title, topic)
         print(f"       -> {len(chunks)} chunks | {topic}")
         all_chunks.extend(chunks)
 
@@ -319,18 +375,18 @@ def crawl() -> list[dict]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="University Parser — парсер информации СГУ")
+    parser = argparse.ArgumentParser(description="University Parser — семантическое чанкование")
     args = parser.parse_args()
 
     print("=" * 60)
-    print("  University Parser — Информация СГУ для студентов")
+    print("  University Parser — Semantic Chunking")
     print("=" * 60)
 
     chunks = crawl()
 
     output = {
         "project": "NETutor",
-        "source": "sgu.ru — Университетская информация",
+        "source": "sgu.ru — University Info",
         "total_chunks": len(chunks),
         "chunks": chunks,
     }
