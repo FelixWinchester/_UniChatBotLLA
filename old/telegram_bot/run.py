@@ -1,5 +1,8 @@
 import asyncio
 import logging
+import sys
+import os
+sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'rag')))
 
 from aiogram import Bot, Dispatcher
 

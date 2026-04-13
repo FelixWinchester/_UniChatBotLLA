@@ -1,44 +1,23 @@
-from qdrant_client import QdrantClient
-from sentence_transformers import SentenceTransformer
+from hybrid_search import hybrid_search
 import ollama
-import torch
-import os
-
-# Загрузка модели эмбеддингов один раз при импорте
-device = "cuda" if torch.cuda.is_available() else "cpu"
-sentence_model = SentenceTransformer('all-MiniLM-L6-v2').to(device)
-client = QdrantClient(host='localhost', port=6333)
 
 def get_rag_answer(query_text: str) -> str:
     if not query_text.strip():
         return "Пустой запрос"
 
-    # Векторизация запроса
-    with torch.no_grad():
-        query_vector = sentence_model.encode(query_text)
-
-    # Поиск ближайших векторов
-    results = client.search(
-        collection_name="my_collection",
-        query_vector=query_vector.tolist(),
-        limit=5,
-        score_threshold=0.2
-    )
+    results = hybrid_search(query_text, collection="my_collection", limit=5)
 
     if not results:
         return "Не найдено релевантной информации."
 
-    # Формирование контекста
-    total_score = sum(r.score for r in results)
     context_parts = []
     for i, r in enumerate(results, 1):
-        score = r.score
-        relative_score = (score / total_score) * 100
-        if relative_score >= 10:
-            context_parts.append(f"Фрагмент {i}:\n{r.payload['text']}")
+        content = r.get("content", "")
+        if content:
+            context_parts.append(f"Фрагмент {i}:\n{content[:500]}")
+    
     context = "\n\n".join(context_parts)
 
-    # Формирование запроса к LLM
     prompt = f"""Задача: обобщи информацию из предоставленных фрагментов текста.
 Используй ТОЛЬКО факты из этих фрагментов.
 
@@ -48,7 +27,6 @@ def get_rag_answer(query_text: str) -> str:
 Вопрос:
 {query_text}"""
 
-    # Запрос к Ollama
     try:
         ollama_response = ollama.chat(
             model="llama3",
@@ -59,3 +37,28 @@ def get_rag_answer(query_text: str) -> str:
         return ollama_response['message']['content']
     except Exception as e:
         return f"Ошибка при обращении к модели: {str(e)}"
+
+
+if __name__ == "__main__":
+    print("RAG System (Hybrid) - Ctrl+C для выхода")
+    print("-" * 40)
+    
+    while True:
+        try:
+            query = input("\nВопрос: ").strip()
+            if not query:
+                continue
+            
+            results = hybrid_search(query, limit=5)
+            print(f"Найдено {len(results)} результатов")
+            for i, r in enumerate(results[:3], 1):
+                print(f"  [{i}] score={r['score']:.3f} (vector={r['vector_score']:.3f}, kw={r['keyword_boost']:.2f})")
+                print(f"      {r['content'][:100]}...")
+            
+            print("\nОтвет:")
+            answer = get_rag_answer(query)
+            print(answer)
+            
+        except KeyboardInterrupt:
+            print("\nВыход")
+            break

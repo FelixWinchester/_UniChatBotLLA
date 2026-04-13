@@ -9,7 +9,6 @@ import os
 
 app = FastAPI()
 
-# Инициализация моделей и клиентов один раз при запуске
 device = "cuda" if torch.cuda.is_available() else "cpu"
 if device == "cuda":
     torch.cuda.empty_cache()
@@ -38,11 +37,9 @@ def format_context(results):
 
 async def ask_llm(prompt: str) -> Optional[str]:
     try:
-        # Векторизация запроса
         with torch.no_grad():
             query_vector = sentence_model.encode(prompt)
         
-        # Поиск в Qdrant
         results = client.search(
             collection_name="my_collection",
             query_vector=query_vector.tolist(),
@@ -52,10 +49,8 @@ async def ask_llm(prompt: str) -> Optional[str]:
         if not results:
             return "Информация не найдена."
         
-        # Формирование контекста
         context = format_context(results)
         
-        # Формируем prompt для Ollama
         full_prompt = f"""Задача: обобщи информацию из предоставленных фрагментов текста.
 Используй ТОЛЬКО факты из этих фрагментов.
 
@@ -65,7 +60,6 @@ async def ask_llm(prompt: str) -> Optional[str]:
 Вопрос:
 {prompt}"""
         
-        # Отправка запроса в Ollama через Python API
         ollama_response = ollama.chat(
             model="llama3.2",
             messages=[
