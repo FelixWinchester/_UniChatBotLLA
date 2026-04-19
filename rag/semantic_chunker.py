@@ -16,7 +16,7 @@ def chunk_schedule(data: List[Dict]) -> List[Dict]:
                 if not lesson.get("subject"):
                     continue
                     
-                content = f"{day_name}: {lesson['time']} - {lesson['subject']}"
+                content = f"Группа {group}, {day_name}: {lesson['time']} - {lesson['subject']}"
                 if lesson.get("type"):
                     content += f" ({lesson['type']})"
                 if lesson.get("teacher"):

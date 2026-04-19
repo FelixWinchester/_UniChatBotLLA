@@ -24,6 +24,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text & ~F.text.startswith("/"))
 async def handle_message_to_llm(message: Message):
+    logger.info(f"Получено сообщение: {message.text}")
     try:
         # Отправляем уведомление о начале обработки
         processing_msg = await message.answer("⏳ Обрабатываю ваше сообщение...")
